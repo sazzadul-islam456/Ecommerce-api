@@ -17,8 +17,8 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // Ensures no duplicate emails
-        lowercase: true, // Avoids case-sensitive duplicates
+        unique: true, 
+        lowercase: true, 
         trim: true
     },
     password: {
@@ -28,10 +28,14 @@ const userSchema = new Schema({
     otp: {
         type: String,
     },
+    otpExpiry: {
+        type: Date,
+        default: Date.now,
+    },
     isVerified: {
         type: Boolean,
         default: false
-    }
+    },
 });
 
 module.exports  = mongoose.model("UserList",userSchema)
