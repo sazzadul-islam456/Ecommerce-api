@@ -17,11 +17,11 @@ async function emailVerification(email, otp) {
       from: `"Jhakanaka Shop 👻" <${process.env.EMAIL_USER}>`,  
       to: email,  
       subject: "OTP Verification",
-      text: `Your OTP is: ${otp}`,  // Plain text version
+      text: `Your OTP is: ${otp}`,  
       html: `<b>Jhakanaka Shop is an e-commerce shop. Here is your OTP: ${otp}</b>`,  
     });
 
-    console.log("Email sent: %s", info.messageId);
+   
   } catch (error) {
     console.error("Failed to send email:", error);
   }

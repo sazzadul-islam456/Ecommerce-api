@@ -28,7 +28,7 @@ const emailVarification = require("../helpers/emailVerification");
  
 
     const otp = crypto.randomInt(100000,999999).toString()
-    console.log(otp);
+    
 
     const otpExpiry = new Date(Date.now() + 10 * 60 * 1000)
 
